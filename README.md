@@ -85,7 +85,25 @@ Il faut déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la
 
 #### Test
 
-En utilisant les fichiers CSS fournis sur ce repo et après avoir exécuter PostCSS, un fichier style.css devrait être apparu et devrait contenir l'ensemble des fichiers CSS sources.
+En utilisant les fichiers CSS fournis sur ce repo et après avoir exécuter PostCSS, un dossier **public** contenant un fichier **style.css** devrait être apparu et devrait contenir l'ensemble des fichiers CSS sources.
+
+### CSSNano
+
+Ce fichier permet d'avoir un fichier CSS de sortie minifié.
+
+#### Installation
+
+`npm install -D cssnano`
+
+#### Configuration 
+
+Il faut déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la ligne suivante : 
+
+`require('cssnano'),`
+
+#### Test
+
+Pour assurer le bon fonctionnement du plugin, il faut vérifier que le fichier de sortie ne contient qu'une seule ligne.
 
 
 
