@@ -1,5 +1,7 @@
 # PostCSS
 
+
+
 ## Qu'est ce que PostCSS ?
 
 PostCSS est un outil permettant de transformer du CSS grâce à des plugins Javascript. Les possibilités offertes par cet outil sont infinies grâce à son son système de plugins. Il existe par exemple des plugins pour :
@@ -121,9 +123,37 @@ Il faut déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la
 
 #### Test
 
-Le fichier CSS de sortie devrait avoir maitenant avoir des propriétés préfixés (pour les ancres). Il est possible que la propriété utilisée sur ce repo n'est plus besoin d'être préfixée dans le futur. Si cela arrive il faut trouver une autre propriété ayant besoin d'être préfixée.s
+Le fichier CSS de sortie devrait avoir maitenant avoir des propriétés préfixés (pour les ancres). Il est possible que la propriété utilisée sur ce repo n'est plus besoin d'être préfixée dans le futur. Si cela arrive il faut trouver une autre propriété ayant besoin d'être préfixée.
 
+### TailWind
 
+Ce plugin est en fait une librairie CSS apportant un ensemble de classe permettant d'obtenir un style pour une page web très rapidement.
+
+#### Installation
+
+`npm install -D tailwindcss`
+
+#### Configuration 
+
+Il faut déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la ligne suivante : 
+
+`require('tailwindcss'),`
+
+Il faut également créer un fichier **tailwind.config.js** à la racine de votre projet et y coller le code suivant : 
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+#### Test
+
+Pour vérifier le bon fonctionnement, les lignes spécifiques à TailWind dans le fichier **style.css** doivent être décommentées. Le fichier **index.html** devrait maintenant utiliser des styles de la bibliothèque TailWind.
 
 
 

@@ -4,5 +4,6 @@ module.exports = {
         require('postcss-import'),
         // require('cssnano'),
         require('autoprefixer'),
+        require('tailwindcss'),
     ]
 }

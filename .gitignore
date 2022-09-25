@@ -1,4 +1,4 @@
 node_modules/
-public/
 package-lock.json
 package.json
+src/public/style.css
