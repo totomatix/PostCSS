@@ -1,0 +1,26 @@
+{
+  "name": "postcss",
+  "version": "1.0.0",
+  "description": "PostCSS est un outil permettant de transformer du CSS grâce à des plugins Javascript. Les possibilités offertes par cet outil sont infinies grâce à son son système de plugins. Il existe par exemple des plugins pour :\r - Pouvoir faire du 'nesting' dans les feuilles de style\r - Utiliser les fonctionnalités les plus récentes de CSS tout en conservant un fichier CSS de sortie compréhensible par tous les navigateurs\r - Minifier le fichier CSS de sortie\r - Autopréfixer les propriétés CSS devant être préfixées\r - Etc ...",
+  "main": "index.js",
+  "scripts": {
+    "postcss:watch": "postcss assets/style/style.css --dir public --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/totomatix/PostCSS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/totomatix/PostCSS/issues"
+  },
+  "homepage": "https://github.com/totomatix/PostCSS#readme",
+  "devDependencies": {
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0"
+  },
+  "dependencies": {}
+}
