@@ -89,7 +89,7 @@ En utilisant les fichiers CSS fournis sur ce repo et après avoir exécuter Post
 
 ### CSSNano
 
-Ce fichier permet d'avoir un fichier CSS de sortie minifié.
+Ce plugin permet d'avoir un fichier CSS de sortie minifié.
 
 #### Installation
 
@@ -107,7 +107,7 @@ Pour assurer le bon fonctionnement du plugin, il faut vérifier que le fichier d
 
 ### Autoprefixer
 
-Ce fichier permet d'avoir un fichier CSS de sortie minifié.
+Ce plugin permet de préfixer automatiquement les propriétés CSS ayant besoin de l'être pour fonctionner sur tous les navigateurs.
 
 #### Installation
 
