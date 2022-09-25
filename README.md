@@ -105,7 +105,23 @@ Il faut déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la
 
 Pour assurer le bon fonctionnement du plugin, il faut vérifier que le fichier de sortie ne contient qu'une seule ligne.
 
+### Autoprefixer
 
+Ce fichier permet d'avoir un fichier CSS de sortie minifié.
+
+#### Installation
+
+`npm install -D autoprefixer`
+
+#### Configuration 
+
+Il faut déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la ligne suivante : 
+
+`require('autoprefixer'),`
+
+#### Test
+
+Le fichier CSS de sortie devrait avoir maitenant avoir des propriétés préfixés (pour les ancres). Il est possible que la propriété utilisée sur ce repo n'est plus besoin d'être préfixée dans le futur. Si cela arrive il faut trouver une autre propriété ayant besoin d'être préfixée.s
 
 
 
