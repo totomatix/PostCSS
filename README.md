@@ -13,7 +13,7 @@
   - [PostCSSimport](#postcssimport)
   - [CSSNano](#cssnano)
   - [Autoprefixer](#autoprefixer)
-  - [TailWind](#tailwind)
+  - [Tailwind](#tailwind)
 - [Liens utiles](#liens-utiles)
 
 ## Qu'est ce que PostCSS ?
@@ -89,6 +89,8 @@ Plusieurs modules sont présentés ici et il n'est pas nécessaire de tous les i
 
 Ce plugin permet d'importer les fichiers CSS les uns dans les autres.
 
+[Lien](https://github.com/postcss/postcss-import)
+
 #### Installation
 
 `npm install -D postcss-import`
@@ -105,7 +107,11 @@ En utilisant les fichiers CSS fournis sur ce repo et après avoir exécuter Post
 
 ### CSSNano
 
+<img src="img/cssnano_logo.svg" width="100" height="100">
+
 Ce plugin permet d'avoir un fichier CSS de sortie minifié.
+
+[Lien](https://github.com/cssnano/cssnano)
 
 #### Installation
 
@@ -123,7 +129,11 @@ Pour assurer le bon fonctionnement du plugin, il faut vérifier que le fichier d
 
 ### Autoprefixer
 
+<img src="img/autoprefixer_logo.svg" width="100" height="100">
+
 Ce plugin permet de préfixer automatiquement les propriétés CSS ayant besoin de l'être pour fonctionner sur tous les navigateurs.
+
+[Lien](https://github.com/postcss/autoprefixer)
 
 #### Installation
 
@@ -139,7 +149,9 @@ Il faut déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la
 
 Le fichier CSS de sortie devrait avoir maitenant avoir des propriétés préfixés (pour les ancres). Il est possible que la propriété utilisée sur ce repo n'est plus besoin d'être préfixée dans le futur. Si cela arrive il faut trouver une autre propriété ayant besoin d'être préfixée.
 
-### TailWind
+### Tailwind
+
+<img src="img/Tailwind_CSS_Logo.svg.png" width="100" height="100">
 
 Ce plugin est en fait une librairie CSS apportant un ensemble de classe permettant d'obtenir un style pour une page web très rapidement.
 
