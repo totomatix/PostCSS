@@ -1,6 +1,20 @@
+<!-- omit from toc -->
 # PostCSS
 
 <img src="img/postcss_logo.svg" width="100" height="100">
+
+- [Qu'est ce que PostCSS ?](#quest-ce-que-postcss-)
+- [Installation et configuration](#installation-et-configuration)
+  - [Prérequis](#prérequis)
+  - [Téléchargement](#téléchargement)
+  - [Création du fichier de configuration](#création-du-fichier-de-configuration)
+  - [Création et exécution du script de lancement](#création-et-exécution-du-script-de-lancement)
+- [Installation des plugins](#installation-des-plugins)
+  - [PostCSSimport](#postcssimport)
+  - [CSSNano](#cssnano)
+  - [Autoprefixer](#autoprefixer)
+  - [TailWind](#tailwind)
+- [Liens utiles](#liens-utiles)
 
 ## Qu'est ce que PostCSS ?
 
@@ -17,7 +31,7 @@ Une liste des plugins disponibles est trouvable [ici](https://www.postcss.parts/
 
 Dans cette partie se trouve la procédure d'installation de PostCSS pour **un seul projet**. Il faut recommancer l'opération pour chaque projet.
 
-### Prérequis
+### Prérequis 
 
 Node.js & npm => [Installation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
