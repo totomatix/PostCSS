@@ -1,9 +1,9 @@
 {
-    "markdown.extension.toc.levels": "2..3",
-    // "markdown.extension.toc.omittedFromToc": {
-    //     // Use a path relative to your workspace.
-    //     "README.md": [
-    //         "# PostCSS",
-    //     ],
-    // }
+    "markdown.extension.toc.levels": "1..2",
+    "markdown.extension.toc.omittedFromToc": {
+        // Use a path relative to your workspace.
+        "README.md": [
+            "# Tutoriel PostCSS",
+        ],
+    }
 }

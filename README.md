@@ -1,20 +1,23 @@
-<!-- omit from toc -->
-# PostCSS
+# Tutoriel PostCSS
 
-<img src="img/postcss_logo.svg" width="100" height="100">
+Présentation et configuration de PostCSS et de certains de ses plugins, notemment la biblothèque de style [Tailwind](https://tailwindcss.com/).
 
-- [Qu'est ce que PostCSS ?](#quest-ce-que-postcss-)
-- [Installation et configuration](#installation-et-configuration)
-  - [Prérequis](#prérequis)
-  - [Téléchargement](#téléchargement)
-  - [Création du fichier de configuration](#création-du-fichier-de-configuration)
-  - [Création et exécution du script de lancement](#création-et-exécution-du-script-de-lancement)
-- [Installation des plugins](#installation-des-plugins)
+- [PostCSS](#postcss)
+  - [Qu'est ce que PostCSS ?](#quest-ce-que-postcss-)
+  - [Installation et configuration](#installation-et-configuration)
+  - [Installation et configuration d'un plugin](#installation-et-configuration-dun-plugin)
+- [Plugins PostCSS](#plugins-postcss)
   - [PostCSSimport](#postcssimport)
   - [CSSNano](#cssnano)
   - [Autoprefixer](#autoprefixer)
   - [Tailwind](#tailwind)
 - [Liens utiles](#liens-utiles)
+
+# PostCSS 
+
+<img src="img/postcss_logo.svg" width="100" height="100">
+ 
+
 
 ## Qu'est ce que PostCSS ?
 
@@ -53,7 +56,7 @@ Et installer la CLI qui va  permettre de communiquer avec PostCSS :
 
 `npm install -D postcss-cli`
 
-L'option `-D` permet que ces packages soient considérés comme des dépendances seulement pour le développement.
+L'option `-D` permet que ces packages soient considérés comme des dépendances seulement pour le développement. 
 
 PostCSS est maintenant installé dans le projet mais sans plugins il est inutile.
 
@@ -81,89 +84,95 @@ Pour exécuter PostCSS il faut lancer la commande suivante dans le terminal :
 
 Il faut relancer la commande à chaque fois que des modification ont été effectuées. Pour faire en sorte que les modifications soient prises en compte dès que le fichier source est modifié il faut ajouter `-- watch` à la fin de la commande *postcss:watch*.
 
-## Installation des plugins
+## Installation et configuration d'un plugin
 
 Plusieurs modules sont présentés ici et il n'est pas nécessaire de tous les installer et ils sont indépendants les uns des autres.
 
-### PostCSSimport
+### Installation
+
+`npm install -D {nom du plugin}`
+
+Il faut ensuite déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la ligne suivante : 
+
+`require('{nom du plugin}'),`
+
+### Configuration 
+
+Tous les plugins ont leur propres options disponibles, il faut donc se référer à la documentation de chaque plugin pour les connaître. 
+
+Généralement, les plugins vont chercher leur configuration dans un fichier **{plugin}.config.js** à la racine de votre projet. Il est recommandé d'utiliser cette méthode quand elle disponible.  
+Si ce n'est pas le cas il est conseillé de définir une constante par plugin contenant les différentes options et d'utiliser cette constante dans la déclaration des plugins dans le fichier **postcss.config.js**. Un exemple pour le plugin cssnano est donné sur ce repo.
+
+# Plugins PostCSS
+
+## PostCSSimport
 
 Ce plugin permet d'importer les fichiers CSS les uns dans les autres.
 
-[Lien](https://github.com/postcss/postcss-import)
+[Lien GitHub](https://github.com/postcss/postcss-import)
 
-#### Installation
+Nom à utiliser pour l'installation : `postcss-import`.
 
-`npm install -D postcss-import`
+### Remarques
 
-#### Configuration 
+Ce plugin doit être placé en premier dans le fichier **postcss.config.js**.
 
-Il faut déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la ligne suivante : 
+### Options 
 
-`require('postcss-import'),`
+La liste des options de ce plugin est disponible [ici](https://github.com/postcss/postcss-import#options).
 
-#### Test
+### Test
 
 En utilisant les fichiers CSS fournis sur ce repo et après avoir exécuter PostCSS, un dossier **public** contenant un fichier **style.css** devrait être apparu et devrait contenir l'ensemble des fichiers CSS sources.
 
-### CSSNano
+## CSSNano
 
 <img src="img/cssnano_logo.svg" width="100" height="100">
 
 Ce plugin permet d'avoir un fichier CSS de sortie minifié.
 
-[Lien](https://github.com/cssnano/cssnano)
+[Lien GitHub](https://github.com/cssnano/cssnano)
 
-#### Installation
+Nom à utiliser pour l'installation : `cssnano`.
 
-`npm install -D cssnano`
+### Configuration 
 
-#### Configuration 
+Ce plugin utilise des *presets* pour changer les options, pour les utiliser il faut ce référer à [cette page](https://cssnano.co/docs/presets/).  
+La liste des options de ce plugin est disponible [ici](https://github.com/postcss/postcss-import#options).
 
-Il faut déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la ligne suivante : 
-
-`require('cssnano'),`
-
-#### Test
+### Test
 
 Pour assurer le bon fonctionnement du plugin, il faut vérifier que le fichier de sortie ne contient qu'une seule ligne.
 
-### Autoprefixer
+## Autoprefixer
 
 <img src="img/autoprefixer_logo.svg" width="100" height="100">
 
 Ce plugin permet de préfixer automatiquement les propriétés CSS ayant besoin de l'être pour fonctionner sur tous les navigateurs.
 
-[Lien](https://github.com/postcss/autoprefixer)
+[Lien GitHub](https://github.com/postcss/autoprefixer)
 
-#### Installation
+Nom à utiliser pour l'installation : `autoprefixer`.
 
-`npm install -D autoprefixer`
+### Configuration 
 
-#### Configuration 
+La liste des options est disponible [ici](https://github.com/postcss/autoprefixer#options).
 
-Il faut déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la ligne suivante : 
-
-`require('autoprefixer'),`
-
-#### Test
+### Test
 
 Le fichier CSS de sortie devrait avoir maitenant avoir des propriétés préfixés (pour les ancres). Il est possible que la propriété utilisée sur ce repo n'est plus besoin d'être préfixée dans le futur. Si cela arrive il faut trouver une autre propriété ayant besoin d'être préfixée.
 
-### Tailwind
+## Tailwind
 
 <img src="img/Tailwind_CSS_Logo.svg.png" width="100" height="100">
 
 Ce plugin est en fait une librairie CSS apportant un ensemble de classe permettant d'obtenir un style pour une page web très rapidement.
 
-#### Installation
+### Installation
 
 `npm install -D tailwindcss`
 
-#### Configuration 
-
-Il faut déclarer le plugin dans le fichier **postcss.config.js** en ajoutant la ligne suivante : 
-
-`require('tailwindcss'),`
+### Configuration 
 
 Il faut également créer un fichier **tailwind.config.js** à la racine de votre projet et y coller le code suivant : 
 ```
@@ -177,11 +186,13 @@ module.exports = {
 }
 ```
 
-#### Test
+Pour découvrir les différentes options vous pouvez vous référer à [ce lien](https://tailwindcss.com/docs/configuration).
+
+### Test
 
 Pour vérifier le bon fonctionnement, les lignes spécifiques à TailWind dans le fichier **style.css** doivent être décommentées. Le fichier **index.html** devrait maintenant utiliser des styles de la bibliothèque TailWind.
 
-## Liens utiles 
+# Liens utiles 
 
 - [Site officiel](https://postcss.org/)
 - [Liste des plugins PostCSS](https://www.postcss.parts/)

@@ -3,9 +3,9 @@
 @import 'components/button.css';
 @import 'components/a.css';
 
-@import 'utilities/font-sizes.css';
+@import 'utilities/font-sizes.css'; 
 
-// Décommenter les lignes suivantes seulement pour tester le plugin TailWInd
+ /* Décommenter les lignes suivantes seulement pour tester le plugin TailWInd */
 /* @tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities; */ 
