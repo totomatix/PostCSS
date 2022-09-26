@@ -1,6 +1,6 @@
 # PostCSS
 
-![Logo PostCSS](img/postcss_logo.svg)
+<img src="img/postcss_logo.svg" width="100" height="100">
 
 ## Qu'est ce que PostCSS ?
 
