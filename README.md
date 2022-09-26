@@ -1,6 +1,6 @@
 # PostCSS
 
-
+![Logo PostCSS](img/postcss_logo.svg)
 
 ## Qu'est ce que PostCSS ?
 
@@ -154,6 +154,12 @@ module.exports = {
 #### Test
 
 Pour vérifier le bon fonctionnement, les lignes spécifiques à TailWind dans le fichier **style.css** doivent être décommentées. Le fichier **index.html** devrait maintenant utiliser des styles de la bibliothèque TailWind.
+
+## Liens utiles 
+
+- [Site officiel](https://postcss.org/)
+- [Liste des plugins PostCSS](https://www.postcss.parts/)
+- [Vidéo d'installation de PostCSS (en anglais)](https://www.youtube.com/watch?v=ohJcZW60br0)
 
 
 
