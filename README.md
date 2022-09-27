@@ -1,6 +1,6 @@
 # Tutoriel PostCSS
 
-Présentation et configuration de PostCSS et de certains de ses plugins, notemment la biblothèque de style [Tailwind](https://tailwindcss.com/).
+Présentation et configuration de PostCSS et de certains de ses plugins, notamment la biblothèque de style [Tailwind](https://tailwindcss.com/).
 
 - [PostCSS](#postcss)
   - [Qu'est ce que PostCSS ?](#quest-ce-que-postcss-)
